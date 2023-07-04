@@ -1,11 +1,11 @@
-import styled from "@emotion/styled";
-import { Container, Link, Menu } from "@gamiui/standard";
+import styled from '@emotion/styled';
+import { Container, Menu } from '@gamiui/standard';
 
 export const MainAside = styled(Container)`
   width: 100%;
 `;
 
-export const SubMenuLink = styled(Link)`
+export const SubMenuLink = styled(Container)`
   width: 100%;
 `;
 

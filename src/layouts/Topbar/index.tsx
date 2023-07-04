@@ -4,14 +4,12 @@ import {
   Link,
   Row,
   Spacer,
-  Tag,
   Title,
   useDevice,
-} from "@gamiui/standard";
-import React, { Fragment } from "react";
-import styled from "@emotion/styled";
-import * as S from "./styles";
-import NextLink from "next/link";
+} from '@gamiui/standard';
+import React, { Fragment } from 'react';
+import styled from '@emotion/styled';
+import * as S from './styles';
 
 export interface ITopbar {
   hasSidebar: boolean;
@@ -30,39 +28,26 @@ const Topbar = ({ toggle }: ITopbar) => {
     <S.Topbar padding="1rem">
       <Row justifyContent="space-between">
         <S.TopbarLeft>
-          <NextLink href={`/`}>
-            <Link href="/" style={{ background: "transparent" }}>
-              <Row>
-                <Icon name="brain" size="30px" />
-                <Spacer direction="right" />
-                <Title level="h2">GamiBlog</Title>
-              </Row>
-            </Link>
-          </NextLink>
+          <Link href="/" style={{ background: 'transparent' }}>
+            <Row>
+              <Icon name="brain" size="30px" />
+              <Spacer direction="right" />
+              <Title level="h2">GamiBlog</Title>
+            </Row>
+          </Link>
         </S.TopbarLeft>
 
         <S.TopbarRight>
           <Row>
-            {device !== "phone" && (
+            {device !== 'phone' && (
               <Fragment>
-                <NextLink href={`/`}>
-                  <LinkItem fontWeight="bold" text="Home" href={`/`} />
-                </NextLink>
+                <LinkItem fontWeight="bold" text="Home" href={`/`} />
+
                 <Spacer direction="left" />
               </Fragment>
             )}
 
-            <Spacer direction="left" />
-
-            <LinkItem
-              isExternal
-              fontWeight="bold"
-              href={`https://github.com/Yei-Linux/GamiUI`}
-            >
-              <Icon name="github" size="20px" />
-            </LinkItem>
-
-            {device !== "desktop" && (
+            {device !== 'desktop' && (
               <Fragment>
                 <Spacer direction="left" />
                 <Icon onClick={toggle} name="hamburger" size="20px" />

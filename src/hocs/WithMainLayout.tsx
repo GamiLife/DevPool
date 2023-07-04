@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import { useDevice } from "@gamiui/standard";
-import React from "react";
-import Aside from "../layouts/Aside";
-import Sections from "../layouts/Sections";
+import styled from '@emotion/styled';
+import { useDevice } from '@gamiui/standard';
+import React from 'react';
+import Aside from '../layouts/Aside';
+import Sections from '../layouts/Sections';
 
 const SectionAside = styled(Sections.Aside)`
   border: 1px solid rgb(219 219 219);
@@ -26,7 +26,7 @@ const WithMainLayout =
   (WrappedComponent: React.ElementType) =>
   (props: Record<string, unknown>) => {
     const { device } = useDevice();
-    const hasAside = device === "desktop";
+    const hasAside = device === 'desktop';
 
     return (
       <SectionHome hasAside={hasAside}>

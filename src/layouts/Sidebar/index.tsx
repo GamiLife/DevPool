@@ -1,7 +1,7 @@
-import { Row, Title, Menu, Icon } from "@gamiui/standard";
-import React from "react";
-import NextLink from "next/link";
-import { siderbar } from "../../constants/layouts";
+import { Row, Title, Menu, Icon, Link } from '@gamiui/standard';
+import React from 'react';
+import NextLink from 'next/link';
+import { siderbar } from '../../constants/layouts';
 
 export interface ISidebar {}
 
@@ -23,7 +23,7 @@ const Sidebar = ({}: ISidebar) => {
               >
                 <Menu>
                   {items.map(({ title, hasIcon, href, icon }, subIndex) => (
-                    <NextLink href={`/docs/${basepath}/${href}`} key={subIndex}>
+                    <Link href={`/docs/${basepath}/${href}`} key={subIndex}>
                       <Menu.SubMenu
                         isOpen={false}
                         title={title}
@@ -32,7 +32,7 @@ const Sidebar = ({}: ISidebar) => {
                         hasIcon={hasIcon}
                         icon={<Icon name={icon} />}
                       />
-                    </NextLink>
+                    </Link>
                   ))}
                 </Menu>
               </Menu.SubMenu>

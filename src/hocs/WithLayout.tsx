@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/display-name */
-import styled from "@emotion/styled";
-import { Container, Drawer, Layout, useDevice } from "@gamiui/standard";
+import styled from '@emotion/styled';
+import { Container, Drawer, Layout, useDevice } from '@gamiui/standard';
 
-import React, { Fragment, useState } from "react";
-import Aside from "../layouts/Aside";
-import Footer from "../layouts/Footer";
-import Topbar from "../layouts/Topbar";
+import React, { Fragment, useState } from 'react';
+import Aside from '../layouts/Aside';
+import Footer from '../layouts/Footer';
+import Topbar from '../layouts/Topbar';
 
 interface Props {
   hasStickyProfile?: boolean;
@@ -56,9 +56,9 @@ const WithLayout =
             </Layout.Header>
           )}
 
-          {device !== "desktop" && (
+          {device !== 'desktop' && (
             <Drawer
-              style={{ padding: "1rem 0" }}
+              style={{ padding: '1rem 0' }}
               onClose={() => setOpen(!open)}
               open={open}
             >

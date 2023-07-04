@@ -1,5 +1,5 @@
-import { Container, Title } from "@gamiui/standard";
-import Post, { IPost } from "../Posts/post";
+import { Container, Title } from '@gamiui/standard';
+import Post, { IPost } from '../Posts/post';
 
 export interface IPosts {
   title: string;
