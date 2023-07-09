@@ -1,5 +1,5 @@
 import { Container, Title } from '@gamiui/standard';
-import Post, { IPost } from '../Posts/post';
+import Post, { IPost } from './post';
 
 export interface IPosts {
   title: string;

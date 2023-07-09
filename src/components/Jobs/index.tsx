@@ -1,6 +1,6 @@
-import React from "react";
-import { jobs } from "../../constants/jobs";
-import Posts from "../Posts";
+import React from 'react';
+import { jobs } from '../../constants/jobs';
+import Posts from '../shared/Posts';
 
 export interface IJobs {}
 

@@ -1,6 +1,6 @@
-import React from "react";
-import { blogs } from "../../constants/blogs";
-import Posts from "../Posts";
+import React from 'react';
+import { blogs } from '../../constants/blogs';
+import Posts from '../shared/Posts';
 
 export interface IBlogs {}
 

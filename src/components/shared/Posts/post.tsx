@@ -1,18 +1,20 @@
-import { Container, Icon, Link, RichText, Title } from '@gamiui/standard';
+import { Container, Icon, RichText, Title } from '@gamiui/standard';
 import * as React from 'react';
 import * as S from './styles';
 import classNames from 'classnames';
 import NextLink from 'next/link';
 
-export interface IPost {
-  hasCode?: boolean;
-  releaseDate?: string;
-  src?: string;
+export type IPost = {
   title: string;
   description: string;
   tags: string[];
   link: string;
-}
+
+  readingTime?: string;
+  releaseDate?: string;
+  src?: string;
+  hasCode?: boolean;
+};
 
 const Post = ({
   hasCode,
@@ -31,7 +33,7 @@ const Post = ({
       className={classNames('flex', 'justify-between', 'items-center')}
     >
       <Container className={classNames('post__image')}>
-        <S.PostImage src={src} />
+        <S.PostImage src={src} maxWidth="250px" />
       </Container>
 
       <Container className={classNames('post__body')}>
